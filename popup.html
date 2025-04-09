@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Google URL Scraper</title>
+        <style>
+            body {
+                width: 400px;
+                padding: 10px;
+                font-family: Arial, sans-serif;
+            }
+            #urlList {
+                max-height: 300px;
+                overflow-y: auto;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                padding: 10px;
+            }
+            .url-item {
+                margin: 5px 0;
+                word-break: break-all;
+            }
+            .button-container {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+            button {
+                background-color: #4285f4;
+                color: white;
+                border: none;
+                padding: 8px 16px;
+                border-radius: 4px;
+                cursor: pointer;
+                flex: 1;
+            }
+            button:hover {
+                background-color: #357abd;
+            }
+            #clearUrls {
+                background-color: #dc3545;
+            }
+            #clearUrls:hover {
+                background-color: #c82333;
+            }
+            #autoNextPage {
+                background-color: #28a745;
+            }
+            #autoNextPage:hover {
+                background-color: #218838;
+            }
+            .url-count {
+                margin-top: 0;
+                color: #666;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Scraped URLs <span id="urlCount" class="url-count">(0)</span></h2>
+        <div class="button-container">
+            <button id="autoNextPage">Auto-Next Page</button>
+            <button id="clearUrls">Clear All</button>
+        </div>
+        <div id="urlList"></div>
+        <button id="copyUrls">Copy All URLs</button>
+        <script src="popup.js"></script>
+    </body>
+</html>
